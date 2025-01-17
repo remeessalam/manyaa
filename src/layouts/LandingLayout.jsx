@@ -12,6 +12,7 @@ import Sectionourresult from "../app/sections/home/index/section-our-result";
 import SectionFour from "../app/landingPage/components/SectionFour";
 import { portfolioDataApp, portfolioDataWeb } from "../globals/constants";
 import FormComponent from "../app/landingPage/components/FormComponent";
+import Testimonials from "../Components/Testimonials";
 
 function RootLandingLayout() {
   const { pathname } = useLocation();
@@ -94,6 +95,9 @@ function RootLandingLayout() {
             <SectionBlogs1 page={modifiedPathname} />
           </div>
           <Sectionourresult />
+          <div>
+            <Testimonials />
+          </div>
           <div ref={contactRef}>
             <SectionFour />
           </div>

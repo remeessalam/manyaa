@@ -4,7 +4,8 @@ import { companyDetails } from "../../../../globals/constants";
 function Sectionourresult() {
   return (
     <>
-      <div className="section-full  p-t110 p-b80 sx-bg-white sx-about-bx1-outer">
+      {/* p-t110 p-b80 */}
+      <div className="section-full   sx-bg-white sx-about-bx1-outer">
         <div className="container">
           <div className="section-content">
             <div className="sx-about-bx1-content-wrap">
