@@ -21,7 +21,7 @@ function AboutUsPage() {
 
   return (
     <>
-      <Banner _data={banner} />
+      <Banner _data={banner} page={"About Us"} />
       <SectionAboutCompany1 />
       <SectionServices1 />
       <OurValues />

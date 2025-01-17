@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { publicUrlFor } from "../globals/constants";
 // import banner from "../../../assets/images/servicesbanner.jpg";
-function Banner({ _data }) {
+function Banner({ _data, page }) {
   return (
     <>
       <div
@@ -13,16 +13,18 @@ function Banner({ _data }) {
           <div className="sx-bnr-inr-entry">
             <div className="banner-title-outer">
               <div className="banner-title-name">
-                <span className="sx-bnr-sm-title">we are Dedicated</span>
-                <h2 className="sx-title">{_data.title}</h2>
+                {/* <span className="sx-bnr-sm-title">we are Dedicated</span> */}
+                <h2 className="sx-title">
+                  {_data.title} {page}
+                </h2>
               </div>
               {/* BREADCRUMB ROW */}
               <div>
                 <ul className="sx-breadcrumb breadcrumb-style-2">
                   <li>
-                    <NavLink to="/index">Home</NavLink>
+                    <NavLink to="/">Home</NavLink>
                   </li>
-                  <li>{_data.crumb}</li>
+                  <li>{page}</li>
                 </ul>
               </div>
               {/* BREADCRUMB ROW END */}

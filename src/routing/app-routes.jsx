@@ -33,7 +33,7 @@ function AppRoutes() {
         {/* <Route path="/faq" element={<FAQPage />} /> */}
         {/* <Route path="/gallery" element={<GalleryPage />} /> */}
         {/* <Route path="/icons" element={<IconsPage />} /> */}
-        <Route path="/testimonials" element={<TestimonialsPage />} />
+        {/* <Route path="/testimonials" element={<TestimonialsPage />} /> */}
         {/* <Route path="/why-choose-us" element={<WhyChooseUsPage />} /> */}
         {/* <Route path="/pricing" element={<PricingPage />} /> */}
         {/* <Route path="/team" element={<TeamPage />} /> */}

@@ -5,7 +5,7 @@ import { companyDetails } from "../../../globals/constants";
 function ContactUsPage() {
   return (
     <>
-      <Banner _data={banner} />
+      <Banner _data={banner} page={"Contact Us"} />
 
       {/* Contact us START */}
       <div className="section-full p-t110 p-b80 sx-bg-white sx-ourteam-outer ">

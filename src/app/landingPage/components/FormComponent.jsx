@@ -61,7 +61,7 @@ const FormComponent = () => {
     // setSpinner(false));
   };
   return (
-    <div className="form-container">
+    <div className="form-container" style={{ padding: "0 1rem" }}>
       <section className="form-wrapper">
         <div className="form-content">
           <div className="form-header">

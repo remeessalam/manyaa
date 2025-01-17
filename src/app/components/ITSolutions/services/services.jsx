@@ -17,7 +17,7 @@ function ServicesPage() {
 
   return (
     <>
-      <Banner _data={banner} />
+      <Banner _data={banner} page="Services" />
       <SectionWhyChooseUs1 />
       {/* <SectionAboutCompany1 /> */}
       {/* <SectionVideo2 /> */}
