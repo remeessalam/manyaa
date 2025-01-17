@@ -5,15 +5,20 @@ import { loadScript, services } from "../../../../globals/constants";
 import ItodoImage from "../../../elements/itodo-img";
 import SectionVideo2 from "../../../../Components/section-video2";
 import SectionWhyChooseUs4 from "../../../../Components/section-why-choose-us4";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function ServicesDetailPage() {
   useEffect(() => {
     loadScript("js/custom.js");
   });
+  const navigate = useNavigate();
+
   const { id } = useParams();
   const serviceDetails = services[id - 1];
   console.log(serviceDetails, "asdfasgf");
+  const navigatToDetails = (id) => {
+    navigate(`/services/${id}`);
+  };
   return (
     <>
       {/* service detail SECTION START */}
@@ -45,66 +50,101 @@ function ServicesDetailPage() {
               <div className="sx-our-service-info m-b80">
                 <p>{serviceDetails.description}</p>
                 <p>{serviceDetails.paragraph}</p>
-
-                <div>
-                  <h2>Our Services</h2>
-                  {serviceDetails.services.map((obj) => (
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns:
+                      "repeat(auto-fit, minmax(300px, 1fr))" /* Responsive grid */,
+                    gap: "4rem" /* Gap between items */,
+                  }}
+                >
+                  <div>
                     <div>
-                      <div className="col-lg-12 col-md-12 m-b10">
-                        <div className="sx-icon-bx-2">
-                          <div className="sx-icon-bx-info">
-                            <span className="sx-icon-bx-title">
-                              {obj.title}:
-                            </span>
-                            <span className="sx-icon-bx-title-info">
-                              {obj.details}
-                            </span>
+                      <h2>Our {serviceDetails.heading} Services</h2>
+                      {serviceDetails.services.map((obj) => (
+                        <div>
+                          <div className="col-lg-12 col-md-12 m-b10">
+                            <div className="sx-icon-bx-2">
+                              <div className="sx-icon-bx-info">
+                                <span className="sx-icon-bx-title">
+                                  {obj.title}:
+                                </span>
+                                <span className="sx-icon-bx-title-info">
+                                  {obj.details}
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <div>
-                  <h2>What We Offer</h2>
-                  {serviceDetails.offerings.map((obj) => (
                     <div>
-                      <div className="col-lg-12 col-md-12 m-b10">
-                        <div className="sx-icon-bx-2">
-                          <div className="sx-icon-bx-info">
-                            <span className="sx-icon-bx-title">
-                              {obj.title}:
-                            </span>
-                            <span className="sx-icon-bx-title-info">
-                              {obj.desc}
-                            </span>
+                      <h2>What We Offer</h2>
+                      {serviceDetails.offerings.map((obj) => (
+                        <div>
+                          <div className="col-lg-12 col-md-12 m-b10">
+                            <div className="sx-icon-bx-2">
+                              <div className="sx-icon-bx-info">
+                                <span className="sx-icon-bx-title">
+                                  {obj.title}:
+                                </span>
+                                <span className="sx-icon-bx-title-info">
+                                  {obj.desc}
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <div>
-                  <h2>Why Choose Us</h2>
-                  {serviceDetails.whyChooseUs.map((obj) => (
                     <div>
-                      <div className="col-lg-12 col-md-12 m-b10">
-                        <div className="sx-icon-bx-2">
-                          <div className="sx-icon-bx-info">
-                            <span className="sx-icon-bx-title">
-                              {obj.title}:
-                            </span>
-                            <span className="sx-icon-bx-title-info">
-                              {obj.desc}
-                            </span>
+                      <h2>Why Choose Us</h2>
+                      {serviceDetails.whyChooseUs.map((obj) => (
+                        <div>
+                          <div className="col-lg-12 col-md-12 m-b10">
+                            <div className="sx-icon-bx-2">
+                              <div className="sx-icon-bx-info">
+                                <span className="sx-icon-bx-title">
+                                  {obj.title}:
+                                </span>
+                                <span className="sx-icon-bx-title-info">
+                                  {obj.desc}
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h2>Other Services</h2>
+                    {services.map((obj) => (
+                      <>
+                        {serviceDetails.id !== obj.id && (
+                          <div
+                            className="service-listing-button-style"
+                            onClick={() => navigatToDetails(obj.id)}
+                          >
+                            <h4
+                              className="sx-breadcrumb breadcrumb-style-2"
+                              style={{ color: "white", cursor: "pointer" }}
+                            >
+                              {obj.heading}
+                            </h4>
+                          </div>
+                        )}
+                      </>
+                    ))}
+                  </div>
                 </div>
               </div>
-
               {/* <SectionCounter1 /> */}
             </div>
           </div>

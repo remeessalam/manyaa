@@ -10742,3 +10742,15 @@ INPUT ANIMATION
 .text-shadow {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Horizontal offset, vertical offset, blur radius, color */
 }
+.service-listing-button-style {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: "white";
+}
+
+.service-listing-button-style:hover {
+  transform: scale(1.05); /* Slightly scale the element on hover */
+}
