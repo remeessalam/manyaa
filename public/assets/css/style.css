@@ -5255,7 +5255,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 
 .site-footer {
   position: relative;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgb(255, 255, 255);
 }
 .site-footer .sx-f-title {
   font-size: 18px;
@@ -5281,7 +5281,7 @@ ol.comment-list li.comment .comment-respond .comment-form p {
 -------------------------------------*/
 
 .footer-dark.site-footer {
-  background-color: #001f3f;
+  background-color: #4c87c3;
 }
 
 .footer-dark .footer-top {

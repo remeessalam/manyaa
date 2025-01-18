@@ -43,7 +43,7 @@ HEADER (top part of page)
 .header-style1 .logo-header {
   display: table;
   float: left;
-  width: 160px;
+  width: 200px;
   height: 70px;
   vertical-align: middle;
   padding: 0;
@@ -804,7 +804,7 @@ HEADER (top part of page)
     padding-right: 0px;
   }
   .header-style1 .logo-header {
-    width: 100px;
+    width: 150px;
     height: 55px;
   }
   .header-style1 .header-style1 .navbar-toggler {
